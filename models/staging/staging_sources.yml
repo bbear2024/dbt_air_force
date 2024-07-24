@@ -1,14 +1,14 @@
 version: 2
-    sources:
-    
-    - name: weather
-      schema: air_force
-      tables:
-        - name: weather_daily_raw
-        - name: weather_hourly_raw
-    
+sources:
+
+- name: weather
+  schema: air_force
+  tables:
+    - name: weather_daily_raw
+    - name: weather_hourly_raw
+
+- name: flights
+  schema: air_force
+  tables:
     - name: flights
-      schema: air_force
-      tables:
-        - name: flights
-        - name: airports
+    - name: airports
