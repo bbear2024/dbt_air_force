@@ -7,7 +7,7 @@ WITH flights_daily AS (
 					count(*) AS n_total_flights,
 					sum(cancelled) AS n_cancelled_flights,
 					(sum(cancelled)*100.0 / count(*))::NUMERIC(4,2) AS cancel_rate
-			FROM {{(ref'prep_flights')}} pf
+			FROM {{ref('prep_flights')}} pf
 			JOIN {{ref('prep_airports')}} a 
 			ON pf.origin = a.faa 
 			GROUP BY pf.flight_date, pf.origin, a.name, a.city 
