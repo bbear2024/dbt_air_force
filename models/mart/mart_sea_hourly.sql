@@ -38,3 +38,4 @@ SELECT  flight_date,
 FROM hourly
 WHERE origin = 'SEA'
 GROUP BY flight_date, dep_hour, temp_c, dewpoint_c, precipitation_mm, wind_direction, wind_speed_kmh, weather_condition
+ORDER BY flight_date, dep_hour
