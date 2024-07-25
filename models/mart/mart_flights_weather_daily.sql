@@ -3,7 +3,7 @@ WITH flights_daily AS (
 					origin,
 					a.name AS airport,
 					a.city,
-					avg(dep_delay_interval) AS avg_dep_delay,
+					avg(dep_delay) AS avg_dep_delay,
 					count(*) AS n_total_flights,
 					sum(cancelled) AS n_cancelled_flights,
 					(sum(cancelled)*100.0 / count(*))::NUMERIC(4,2) AS cancel_rate
