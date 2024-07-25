@@ -5,7 +5,7 @@ WITH flights AS (
 flights_cleaned AS(
     SELECT flight_date::DATE
             ,TO_CHAR(dep_time, 'fm0000')::TIME AS dep_time
-            ,TO_CHAR((TO_CHAR(dep_time, 'fm0000')::TIME),'HH24:00') as dep_hour
+            ,TO_CHAR((TO_CHAR(sched_dep_time, 'fm0000')::TIME),'HH24:00') as dep_hour
             ,TO_CHAR(sched_dep_time, 'fm0000')::TIME AS sched_dep_time
             ,dep_delay
 		    ,(dep_delay * '1 minute'::INTERVAL) AS dep_delay_interval
