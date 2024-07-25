@@ -26,7 +26,7 @@ WITH hourly AS (
 )
 SELECT  flight_date,
 		dep_hour,
-		AVG(dep_delay)::NUMERIC(5,2) AS avg_dep_delay,
+		AVG(dep_delay)::NUMERIC(6,2) AS avg_dep_delay,
 		COUNT(*) AS n_total,
 		SUM(cancelled) AS n_cancelled,
 		temp_c,
